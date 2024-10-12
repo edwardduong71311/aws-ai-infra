@@ -11,6 +11,14 @@ provider "aws" {
   region  = "us-east-1"
 }
 
-resource "aws_ecr_repository" "ai_ecr_repo" {
-  name = "ai-repo"
+module "ecr" {
+  source = "./modules/ecr"
+}
+
+module "ecs" {
+  source = "./modules/ecs"
+}
+
+module "ecs_task" {
+  source = "./modules/ecs_task"
 }
