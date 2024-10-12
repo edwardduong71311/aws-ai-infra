@@ -1,4 +1,4 @@
-name: "Check TF"
+name: "Apply TF"
 
 on:
   workflow_dispatch:
