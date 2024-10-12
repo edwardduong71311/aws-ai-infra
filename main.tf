@@ -2,11 +2,15 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "5.71.0"
+      version = var.aws_version
     }
   }
 }
 
 provider "aws" {
-  region  = "us-east-1"
+  region  = var.aws_region
+}
+
+module "ai" {
+  source = "./ai"
 }
