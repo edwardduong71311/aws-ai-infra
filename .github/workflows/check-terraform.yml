@@ -20,15 +20,15 @@ jobs:
         shell: bash
 
     steps:
-      - name: "Configure AWS Credentials"
-        uses: aws-actions/configure-aws-credentials@v4.0.2
-        with:
-          aws-region: ${{ vars.AWS_REGION }}
-          role-to-assume: ${{ vars.AWS_ROLE_TO_ASSUME }}
+      # - name: "Configure AWS Credentials"
+      #   uses: aws-actions/configure-aws-credentials@v4.0.2
+      #   with:
+      #     aws-region: ${{ vars.AWS_REGION }}
+      #     role-to-assume: ${{ vars.AWS_ROLE_TO_ASSUME }}
 
-      - name: Check AWS Config
-        run: |
-          aws --version
+      # - name: Check AWS Config
+      #   run: |
+      #     aws --version
 
       - name: Checkout
         uses: actions/checkout@v4
