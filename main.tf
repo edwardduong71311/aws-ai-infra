@@ -11,6 +11,14 @@ provider "aws" {
   region  = var.aws_region
 }
 
-module "ai" {
-  source = "./ai"
+module "ecr" {
+  source = "./ecr"
+}
+
+module "ecs" {
+  source = "./ecs"
+}
+
+module "ecs_task" {
+  source = "./ecs_task"
 }
