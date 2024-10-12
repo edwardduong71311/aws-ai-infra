@@ -12,13 +12,13 @@ provider "aws" {
 }
 
 module "ecr" {
-  source = "./ecr"
+  source = "./modules/ecr"
 }
 
 module "ecs" {
-  source = "./ecs"
+  source = "./modules/ecs"
 }
 
 module "ecs_task" {
-  source = "./ecs_task"
+  source = "./modules/ecs_task"
 }
